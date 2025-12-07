@@ -1,0 +1,178 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A friendly doctor smiling in a modern clinic.",
+      "imageUrl": "https://picsum.photos/seed/hero1/1200/800",
+      "imageHint": "doctor clinic"
+    },
+    {
+      "id": "clinic-interior-1",
+      "description": "The bright and modern interior of a clinic waiting room.",
+      "imageUrl": "https://picsum.photos/seed/clinic1/800/600",
+      "imageHint": "clinic interior"
+    },
+    {
+      "id": "doctor-1",
+      "description": "Portrait of Dr. Evelyn Reed.",
+      "imageUrl": "https://picsum.photos/seed/doc1/400/400",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "doctor-2",
+      "description": "Portrait of Dr. Marcus Thorne.",
+      "imageUrl": "https://picsum.photos/seed/doc2/400/500",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "doctor-3",
+      "description": "Portrait of Dr. Lena Petrova.",
+      "imageUrl": "https://picsum.photos/seed/doc3/400/400",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "doctor-4",
+      "description": "Portrait of Dr. Kenji Tanaka.",
+      "imageUrl": "https://picsum.photos/seed/doc4/400/400",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "patient-1",
+      "description": "Avatar for patient Sarah L.",
+      "imageUrl": "https://picsum.photos/seed/pat1/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "patient-2",
+      "description": "Avatar for patient Michael B.",
+      "imageUrl": "https://picsum.photos/seed/pat2/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "patient-3",
+      "description": "Avatar for patient Emily C.",
+      "imageUrl": "https://picsum.photos/seed/pat3/100/100",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "patient-avatar-1",
+      "description": "Avatar for a patient",
+      "imageUrl": "https://picsum.photos/seed/pata1/100/100",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "patient-avatar-2",
+      "description": "Avatar for a patient",
+      "imageUrl": "https://picsum.photos/seed/pata2/100/100",
+      "imageHint": "man avatar"
+    },
+    {
+      "id": "patient-avatar-3",
+      "description": "Avatar for a patient",
+      "imageUrl": "https://picsum.photos/seed/pata3/100/100",
+      "imageHint": "man avatar"
+    },
+    {
+      "id": "patient-avatar-4",
+      "description": "Avatar for a patient",
+      "imageUrl": "https://picsum.photos/seed/pata4/100/100",
+      "imageHint": "woman avatar"
+    },
+    {
+      "id": "patient-avatar-5",
+      "description": "Avatar for a patient",
+      "imageUrl": "https://picsum.photos/seed/pata5/100/100",
+      "imageHint": "man avatar"
+    },
+    {
+      "id": "speciality-1",
+      "description": "Illustration of Piles Treatment",
+      "imageUrl": "https://picsum.photos/seed/spec1/80/60",
+      "imageHint": "medical illustration"
+    },
+    {
+      "id": "speciality-2",
+      "description": "Illustration of Anal Fissure Treatment",
+      "imageUrl": "https://picsum.photos/seed/spec2/80/60",
+      "imageHint": "medical illustration"
+    },
+    {
+      "id": "speciality-3",
+      "description": "Illustration of Fistula Treatment",
+      "imageUrl": "https://picsum.photos/seed/spec3/80/60",
+      "imageHint": "medical illustration"
+    },
+    {
+      "id": "speciality-4",
+      "description": "Illustration of Circumcision",
+      "imageUrl": "https://picsum.photos/seed/spec4/80/60",
+      "imageHint": "medical illustration"
+    },
+    {
+      "id": "featured-post-1",
+      "description": "Abstract image representing laser treatment.",
+      "imageUrl": "https://picsum.photos/seed/post1/600/400",
+      "imageHint": "medical technology"
+    },
+    {
+      "id": "clinic-reception",
+      "description": "The welcoming reception area of our clinic.",
+      "imageUrl": "https://picsum.photos/seed/cr/600/400",
+      "imageHint": "clinic reception"
+    },
+    {
+      "id": "clinic-waiting-area",
+      "description": "Our spacious and comfortable waiting area.",
+      "imageUrl": "https://picsum.photos/seed/cwa/600/400",
+      "imageHint": "clinic waiting room"
+    },
+    {
+      "id": "clinic-room-1",
+      "description": "A modern and clean patient consultation room.",
+      "imageUrl": "https://picsum.photos/seed/cproom1/600/400",
+      "imageHint": "consultation room"
+    },
+    {
+      "id": "clinic-equipment-1",
+      "description": "State-of-the-art medical equipment.",
+      "imageUrl": "https://picsum.photos/seed/cequip1/600/400",
+      "imageHint": "medical equipment"
+    },
+    {
+      "id": "clinic-room-2",
+      "description": "A comfortable and private examination room.",
+      "imageUrl": "https://picsum.photos/seed/cproom2/600/400",
+      "imageHint": "examination room"
+    },
+    {
+      "id": "clinic-exterior",
+      "description": "The exterior of our modern clinic building.",
+      "imageUrl": "https://picsum.photos/seed/cext/600/400",
+      "imageHint": "clinic exterior"
+    },
+    {
+      "id": "blog-post-1",
+      "description": "A person having a health checkup with a doctor.",
+      "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+      "imageHint": "health checkup"
+    },
+    {
+      "id": "blog-post-2",
+      "description": "A blood pressure monitor showing a healthy reading.",
+      "imageUrl": "https://picsum.photos/seed/blog2/600/400",
+      "imageHint": "blood pressure"
+    },
+    {
+      "id": "blog-post-3",
+      "description": "A person applying sunscreen at the beach.",
+      "imageUrl": "https://picsum.photos/seed/blog3/600/400",
+      "imageHint": "sun protection"
+    },
+    {
+      "id": "blog-post-4",
+      "description": "A person jogging in a park.",
+      "imageUrl": "https://picsum.photos/seed/blog4/600/400",
+      "imageHint": "jogging park"
+    }
+  ]
+}
