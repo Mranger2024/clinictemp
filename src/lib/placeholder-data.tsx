@@ -7,6 +7,28 @@ export type Service = {
   description: string;
   icon: React.ReactNode;
   category: 'General' | 'Specialty' | 'Surgical';
+  duration?: string;
+  details?: {
+    whatToExpect?: string[];
+    procedure?: string;
+    recovery?: string;
+    recoveryTime?: string;
+    anesthesia?: string;
+    faqs?: Array<{ question: string; answer: string }>;
+    pricing?: {
+      basePrice: number;
+      consultationFee?: number;
+      followUpPrice?: number;
+      includes?: string[];
+      additionalFees?: Array<{
+        name: string;
+        price: number;
+        description?: string;
+      }>;
+      insuranceInfo?: string;
+      paymentOptions?: string[];
+    };
+  };
 };
 
 export type Doctor = {
@@ -60,46 +82,219 @@ export type Post = {
 
 export const services: Service[] = [
   {
-    id: 's1',
+    id: 'general-checkup',
     name: 'General Checkup',
     description: 'Comprehensive health assessments for all ages to monitor and maintain your wellbeing.',
     icon: <HeartPulse />,
     category: 'General',
+    duration: '30-45 minutes',
+    details: {
+      whatToExpect: [
+        'Review of medical history',
+        'Vital signs check (blood pressure, heart rate, etc.)',
+        'Physical examination',
+        'Basic vision and hearing tests',
+        'Preventive health counseling'
+      ],
+      procedure: 'A general checkup involves a comprehensive review of your health status, including medical history, lifestyle factors, and any current concerns. The doctor will perform a physical examination and may order basic lab tests if needed.',
+      recovery: 'No recovery time is needed for a general checkup. You can resume your normal activities immediately after the visit.',
+      recoveryTime: 'None',
+      faqs: [
+        {
+          question: 'How often should I get a general checkup?',
+          answer: 'Most healthy adults should have a general checkup once a year. However, your doctor may recommend more frequent visits based on your age, medical history, and risk factors.'
+        },
+        {
+          question: 'Do I need to fast before a general checkup?',
+          answer: 'Fasting is typically not required for a basic checkup, but your doctor may ask you to fast if blood tests are planned.'
+        }
+      ]
+    }
   },
   {
-    id: 's2',
+    id: 'cardiology',
     name: 'Cardiology',
     description: 'Specialized care for heart conditions, including diagnosis, treatment, and prevention.',
     icon: <Stethoscope />,
     category: 'Specialty',
+    duration: '45-60 minutes',
+    details: {
+      pricing: {
+        basePrice: 4999,
+        consultationFee: 1999,
+        followUpPrice: 2499,
+        includes: [
+          'Comprehensive cardiac evaluation',
+          'Electrocardiogram (ECG/EKG)',
+          'Blood pressure monitoring',
+          'Personalized treatment plan'
+        ],
+        additionalFees: [
+          { name: 'Echocardiogram', price: 3499, description: 'If recommended by the cardiologist' },
+          { name: 'Stress Test', price: 4299, description: 'If clinically indicated' }
+        ],
+        insuranceInfo: 'We work with most cardiac care insurance providers. Prior authorization may be required for some tests.',
+        paymentOptions: ['Credit/Debit', 'HSA/FSA', 'Insurance', 'Payment Plans']
+      },
+      whatToExpect: [
+        'Detailed medical history review',
+        'Cardiovascular examination',
+        'Electrocardiogram (ECG/EKG)',
+        'Blood pressure monitoring',
+        'Discussion of symptoms and risk factors'
+      ],
+      procedure: 'Cardiology consultations involve a thorough evaluation of heart health, including listening to heart sounds, checking for irregular heartbeats, and reviewing any symptoms. Additional tests like echocardiograms or stress tests may be recommended.',
+      recovery: 'Most cardiology consultations don\'t require recovery time. If procedures are performed, recovery will vary based on the specific test.',
+      recoveryTime: 'Varies by procedure',
+      faqs: [
+        {
+          question: 'What are the warning signs of heart disease?',
+          answer: 'Common signs include chest pain, shortness of breath, palpitations, dizziness, and swelling in the legs. However, some people may have no symptoms.'
+        },
+        {
+          question: 'How can I prepare for my first cardiology appointment?',
+          answer: 'Bring a list of your medications, medical history, and any previous test results. Wear comfortable clothing and avoid applying lotions or powders to your chest area.'
+        }
+      ]
+    }
   },
   {
-    id: 's3',
+    id: 'vaccinations',
     name: 'Vaccinations',
     description: 'Stay protected with our full range of vaccinations for children and adults.',
     icon: <Syringe />,
     category: 'General',
+    duration: '15-30 minutes',
+    details: {
+      whatToExpect: [
+        'Review of vaccination history',
+        'Medical history assessment',
+        'Vaccine administration',
+        'Observation period (if required)', 
+        'Documentation and next dose scheduling'
+      ],
+      procedure: 'Vaccination appointments are quick and typically involve a brief health check, administration of the vaccine (usually via injection), and a short observation period to monitor for any immediate reactions.',
+      recovery: 'Mild side effects like soreness at the injection site, low-grade fever, or fatigue are common and usually resolve within 1-2 days.',
+      recoveryTime: '1-2 days for minor side effects',
+      faqs: [
+        {
+          question: 'What vaccines do adults need?',
+          answer: 'Recommended vaccines for adults include flu (annual), Tdap/Td (tetanus, diphtheria, pertussis), shingles (after age 50), pneumonia (after 65 or for certain conditions), and COVID-19 boosters.'
+        },
+        {
+          question: 'Can I get multiple vaccines at once?',
+          answer: 'Yes, most vaccines can be given during the same visit. Your healthcare provider will determine which vaccines are appropriate based on your age, health status, and vaccination history.'
+        }
+      ]
+    }
   },
   {
-    id: 's4',
+    id: 'dermatology',
     name: 'Dermatology',
     description: 'Expert care for skin, hair, and nail conditions, from acne to skin cancer screenings.',
     icon: <Activity />,
     category: 'Specialty',
+    duration: '30-45 minutes',
+    details: {
+      whatToExpect: [
+        'Skin examination',
+        'Discussion of skin concerns',
+        'Diagnosis and treatment planning',
+        'Procedures (if needed, such as biopsies or cryotherapy)', 
+        'Skincare recommendations'
+      ],
+      procedure: 'A dermatology visit typically involves a full-body skin check, examination of specific areas of concern, and discussion of symptoms. The dermatologist may perform procedures like biopsies, cryotherapy, or prescribe medications.',
+      recovery: 'Recovery depends on the procedure. Most routine exams require no recovery time, while procedures like biopsies may require a few days of wound care.',
+      recoveryTime: 'Varies by procedure',
+      faqs: [
+        {
+          question: 'How often should I get a skin cancer screening?',
+          answer: 'Annual skin checks are recommended for most adults, especially those with a history of sun exposure, fair skin, or a family history of skin cancer.'
+        },
+        {
+          question: 'Should I wear makeup to my dermatology appointment?',
+          answer: 'It\'s best to come with clean, makeup-free skin so the dermatologist can properly examine your skin. Avoid wearing nail polish if you have concerns about your nails.'
+        }
+      ]
+    }
   },
   {
-    id: 's5',
+    id: 'orthopedics',
     name: 'Orthopedics',
     description: 'Treatment for musculoskeletal issues, including sports injuries and joint problems.',
     icon: <Bone />,
     category: 'Specialty',
+    duration: '30-60 minutes',
+    details: {
+      pricing: {
+        basePrice: 3499,
+        consultationFee: 1499,
+        followUpPrice: 1999,
+        includes: [
+          'Comprehensive evaluation',
+          'Range of motion assessment',
+          'Diagnostic imaging review',
+          'Personalized treatment plan'
+        ],
+        additionalFees: [
+          { name: 'X-rays', price: 1299, description: 'If needed' },
+          { name: 'Joint injection', price: 1799, description: 'If clinically indicated' },
+          { name: 'Bracing/supports', price: 799, description: 'Varies by type' }
+        ],
+        insuranceInfo: 'We accept most major insurance plans. Some procedures may require pre-authorization.',
+        paymentOptions: ['Credit/Debit', 'HSA/FSA', 'Insurance', 'Payment Plans']
+      },
+      whatToExpect: [
+        'Medical history review',
+        'Physical examination',
+        'Range of motion assessment',
+        'Imaging review (if applicable)',
+        'Treatment planning'
+      ],
+      procedure: 'An orthopedic consultation includes evaluation of your symptoms, physical examination of the affected area, review of any imaging studies, and development of a personalized treatment plan which may include physical therapy, medications, or surgical options.',
+      recovery: 'Recovery varies widely depending on the condition and treatment. Some patients may require physical therapy, while others might need surgical intervention with longer recovery periods.',
+      recoveryTime: 'Varies by condition and treatment',
+      faqs: [
+        {
+          question: 'When should I see an orthopedist?',
+          answer: 'Consider seeing an orthopedist for persistent joint pain, difficulty with daily activities, sports injuries, or if you have a musculoskeletal condition that isn\'t improving with rest and over-the-counter treatments.'
+        },
+        {
+          question: 'What should I bring to my first orthopedic appointment?',
+          answer: 'Bring any relevant medical records, imaging studies (X-rays, MRIs), a list of medications, and be prepared to discuss your symptoms, when they started, and what makes them better or worse.'
+        }
+      ]
+    }
   },
   {
-    id: 's6',
+    id: 'lab-tests',
     name: 'Lab Tests',
     description: 'On-site laboratory for fast and accurate diagnostic testing and results.',
     icon: <Microscope />,
     category: 'General',
+    duration: '15-30 minutes',
+    details: {
+      whatToExpect: [
+        'Registration and check-in',
+        'Sample collection (blood, urine, etc.)',
+        'Processing of samples',
+        'Results communication',
+        'Follow-up if needed'
+      ],
+      procedure: 'Lab tests involve collecting samples such as blood, urine, or other specimens for analysis. The specific preparation depends on the test being performed (fasting, medication restrictions, etc.).',
+      recovery: 'Most lab tests require no recovery time. You may experience minor bruising at blood draw sites which typically resolves within a few days.',
+      recoveryTime: 'Minimal to none',
+      faqs: [
+        {
+          question: 'How long does it take to get lab results?',
+          answer: 'Most routine test results are available within 1-3 business days. Some specialized tests may take longer. Your healthcare provider will discuss the expected timeline for your specific tests.'
+        },
+        {
+          question: 'Do I need to fast before my lab test?',
+          answer: 'Some tests require fasting (typically 8-12 hours without food or drink except water). Your healthcare provider will give you specific instructions based on the tests ordered.'
+        }
+      ]
+    }
   },
   {
     id: 's7',

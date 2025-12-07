@@ -1,7 +1,7 @@
 'use client';
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Search, ListFilter } from 'lucide-react';
+import { Search, ListFilter, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import PageHeader from '@/components/page-header';
@@ -107,24 +107,27 @@ const ServicesPage = () => {
               </Tabs>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredAndSortedServices.map((service, index) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {filteredAndSortedServices.map((service) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                transition={{ duration: 0.3 }}
               >
-                <Link href="#" className="h-full block">
-                  <Card className="h-full transform-gpu transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <CardHeader className="flex-row items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Link href={`/services/${service.id}`} className="block h-full">
+                  <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
+                    <CardHeader>
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                         {service.icon}
                       </div>
-                      <CardTitle className="font-headline text-xl font-semibold">{service.name}</CardTitle>
+                      <CardTitle className="mt-4">{service.name}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">{service.description}</p>
+                      <p className="text-muted-foreground line-clamp-3">{service.description}</p>
+                      <div className="mt-4 flex items-center text-sm text-primary font-medium">
+                        Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                      </div>
                     </CardContent>
                   </Card>
                 </Link>
