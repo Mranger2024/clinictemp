@@ -8,7 +8,7 @@ import { SectionThemeSwitcher } from '@/components/section-theme-switcher';
 import { useSectionTheme } from '@/components/section-theme-context';
 
 export function CallToActionSection() {
-    const { currentTheme } = useSectionTheme('cta', 'modern');
+    const { currentTheme } = useSectionTheme('cta', 'default');
 
     return (
         <div className="relative group">

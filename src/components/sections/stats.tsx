@@ -8,7 +8,7 @@ import { SectionThemeSwitcher } from '@/components/section-theme-switcher';
 import { useSectionTheme } from '@/components/section-theme-context';
 
 export function StatsSection() {
-    const { currentTheme } = useSectionTheme('stats', 'modern');
+    const { currentTheme } = useSectionTheme('stats', 'default');
 
     return (
         <div className="relative group">
