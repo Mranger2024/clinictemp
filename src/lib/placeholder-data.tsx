@@ -471,4 +471,6 @@ export const posts: Post[] = [
         date: '2024-09-08',
         readTime: 7,
     },
-];
+];export const featuredPostImage = { id: 'featured-post-1', imageUrl: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=1000', imageHint: 'laser treatment' };
+
+export const recentPosts = [ { id: 'post-1', title: 'Understanding Piles: Causes and Treatments', imageId: 'doctor-1' }, { id: 'post-2', title: 'Dietary Tips for Healthy Digestion', imageId: 'doctor-2' }, { id: 'post-3', title: 'When to See a Proctologist', imageId: 'doctor-3' } ];

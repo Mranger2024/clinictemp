@@ -1,6 +1,5 @@
-
 import { Check } from 'lucide-react';
-import MultiStepAppointmentForm from '@/components/multi-step-appointment-form';
+import AppointmentFormContainer from '@/components/appointment-form-container';
 
 const AppointmentPage = () => {
   return (
@@ -30,7 +29,7 @@ const AppointmentPage = () => {
           <p className="font-semibold">For urgent cases, please call us directly at +91 98765 43210</p>
         </div>
         <div className="relative flex items-center justify-center">
-          <MultiStepAppointmentForm />
+          <AppointmentFormContainer />
         </div>
       </div>
     </div>
@@ -39,4 +38,3 @@ const AppointmentPage = () => {
 
 export default AppointmentPage;
 
-    

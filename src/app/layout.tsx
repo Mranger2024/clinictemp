@@ -3,12 +3,14 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import './globals.css';
+import { AppointmentFormProvider } from '@/components/appointment-form-context';
+import { SectionThemeProvider } from '@/components/section-theme-context';
+import { HeaderProvider } from '@/components/header-context';
 
 export const metadata: Metadata = {
-  title: 'Colon Clinics - One Stop Destination for Piles, Anal fissure & Fistula Treatment',
-  description: 'Scalable, SEO-friendly, modern web application for clinics.',
+  title: 'Smile Dental Clinic - Your Trusted Partner for Complete Dental Care',
+  description: 'Professional dental care with advanced technology. Offering general dentistry, cosmetic procedures, orthodontics, and emergency dental services.',
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,11 +27,17 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <AppointmentFormProvider>
+          <SectionThemeProvider>
+            <HeaderProvider>
+              <div className="flex min-h-screen flex-col">
+                <Header />
+                <main className="flex-1">{children}</main>
+                <Footer />
+              </div>
+            </HeaderProvider>
+          </SectionThemeProvider>
+        </AppointmentFormProvider>
         <Toaster />
       </body>
     </html>
